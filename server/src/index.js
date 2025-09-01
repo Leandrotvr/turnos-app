@@ -7,14 +7,27 @@ import { parseBody, usuarioSchema, turnoSchema } from "./validation.js";
 const prisma = new PrismaClient();
 const app = express();
 
-app.use(cors());
+const allowlist = new Set([
+  "https://turnos-client.onrender.com",
+  "http://localhost:5173"
+]);
+app.use(cors({
+  origin: (origin, cb) => {
+    if (!origin || allowlist.has(origin)) return cb(null, true);
+    return cb(new Error("Not allowed by CORS"));
+  },
+  methods: ["GET","POST","DELETE","OPTIONS"],
+  allowedHeaders: ["Content-Type"],
+  credentials: false,
+  maxAge: 86400
+}));
 app.use(express.json());
 
 // Construye Date en -03:00 (AR)
 function construirInicio(fecha, hora) {
   const iso = `${fecha}T${hora}:00-03:00`;
   const d = new Date(iso);
-  if (isNaN(d)) throw new Error("fecha/hora invÃ¡lidas");
+  if (isNaN(d)) throw new Error("fecha/hora invÃƒÂ¡lidas");
   return d;
 }
 
@@ -90,7 +103,7 @@ app.get("/api/turnos", async (req, res) => {
 
 app.delete("/api/turnos/:id", async (req, res) => {
   const id = Number(req.params.id);
-  if (!Number.isInteger(id) || id <= 0) return res.status(400).json({ error: "id invÃ¡lido" });
+  if (!Number.isInteger(id) || id <= 0) return res.status(400).json({ error: "id invÃƒÂ¡lido" });
   try {
     await prisma.turno.delete({ where: { id } });
     res.status(204).send();
