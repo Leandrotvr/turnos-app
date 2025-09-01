@@ -3,31 +3,30 @@
 **Demo:** https://turnos-client.onrender.com/  
 **API:**  https://turnos-api-49rk.onrender.com
 
-## Contacto
+## Datos de contacto
 - **Nombre:** Leandro  
 - **Email:** leandrotvr@gmail.com  
-- **Disponibilidad:** Abierto a propuestas freelance y empleo.
+- **Objetivo:** Postulación a **empleo formal** (no freelance).
 
-## Competencias / Tecnologías puestas en práctica
-- **Frontend:** React 18, Vite, fetch API, manejo de estado básico.
-- **Backend:** Node.js, Express, validación con Zod, CORS.
-- **ORM/DB:** Prisma, PostgreSQL (Render) y SQLite (desarrollo local).
-- **Infra:** Render (Web Service + Static Site + PostgreSQL), variables de entorno, health checks.
-- **DevOps básico:** Deploy CI por push a GitHub, prisma db push / migraciones, logs de eventos.
-- **Automatización:** Scripts PowerShell (tareas programadas, reemplazos seguros UTF-8 sin BOM).
-- **Buenas prácticas:** Manejo de errores en fetch (try/catch/finally), preflight CORS, separación API/cliente.
+## Puestos a los que aplico
+- **Desarrollador Fullstack Jr**
+- **Asistente Administrativo / Secretario**
+- **Data Entry**
+- **Atención al Cliente / Soporte**
+- **Docencia TIC**
+- **Soporte Técnico / Automatización Jr**
 
-## Servicios ofrecidos
-- Desarrollo web fullstack (React/Node/Prisma).
-- Implementación rápida de MVPs para PYMES (turnos, facturación, foros, to-do).
-- Asistencia Virtual, Soporte al Cliente, Data Entry con automatización.
-- Integración de APIs y despliegue en Render / servicios similares.
+## Competencias
+- **Frontend:** React, Vite
+- **Backend:** Node.js, Express
+- **Bases de datos:** Prisma, PostgreSQL, SQLite
+- **Infraestructura:** Render, env vars, health checks
+- **Automatización:** PowerShell, scripts
+- **Competencias docentes:** planificación, comunicación clara
+- **Atención al cliente:** escucha activa, resolución orientada a procesos
 
-## Busco empleabilidad en
-- **Desarrollo Web Fullstack (React/Node).**
-- **Soporte al Cliente / Asistencia Técnica.**
-- **Asistencia Virtual y Data Entry con automatización.**
-- **Automatización con PowerShell y APIs.**
-- **Implementación de soluciones simples para negocios.**
+## Estoy buscando
+- **Empleo formal** en Fullstack Jr, Asistencia, Secretaría, Data Entry, Atención al Cliente/Soporte, Docencia TIC.
+- Modalidad presencial/remota/híbrida. **Disponibilidad para entrevistas.**
 
-> Si te interesa algo parecido para tu negocio o equipo, escribime: **leandrotvr@gmail.com**.
+> Contacto: **leandrotvr@gmail.com**
