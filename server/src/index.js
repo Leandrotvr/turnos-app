@@ -7,15 +7,14 @@ import { parseBody, usuarioSchema, turnoSchema } from "./validation.js";
 const prisma = new PrismaClient();
 const app = express();
 
-const corsOrigins = process.env.CORS_ORIGIN?.split(",").map(s => s.trim()).filter(Boolean) || "*";
-app.use(cors({ origin: corsOrigins }));
+app.use(cors());
 app.use(express.json());
 
 // Construye Date en -03:00 (AR)
 function construirInicio(fecha, hora) {
   const iso = `${fecha}T${hora}:00-03:00`;
   const d = new Date(iso);
-  if (isNaN(d)) throw new Error("fecha/hora inválidas");
+  if (isNaN(d)) throw new Error("fecha/hora invÃ¡lidas");
   return d;
 }
 
@@ -91,7 +90,7 @@ app.get("/api/turnos", async (req, res) => {
 
 app.delete("/api/turnos/:id", async (req, res) => {
   const id = Number(req.params.id);
-  if (!Number.isInteger(id) || id <= 0) return res.status(400).json({ error: "id inválido" });
+  if (!Number.isInteger(id) || id <= 0) return res.status(400).json({ error: "id invÃ¡lido" });
   try {
     await prisma.turno.delete({ where: { id } });
     res.status(204).send();
